@@ -113,9 +113,7 @@ model = LdaModel(
     eval_every=eval_every
 )
 
-top_topics = model.top_topics(corpus)
-
-top_topics = model.top_topics(corpus) 
+pprint(model.print_topics())
 
 # Average topic coherence is the sum of topic coherences of all topics, divided by the number of topics.
 avg_topic_coherence = sum([t[1] for t in top_topics]) / num_topics
